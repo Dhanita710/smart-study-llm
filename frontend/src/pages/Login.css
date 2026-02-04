@@ -1,0 +1,148 @@
+/* ═══════════════════════════════════════
+   Login.css — exact Dashboard feel
+   ═══════════════════════════════════════ */
+
+/* ─── Page — same bg gradient as .dashboard-container ─── */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, #faf5ff 0%, #f3e8ff 50%, #ede9fe 100%);
+  font-family: 'Inter', sans-serif;
+  color: #1f2937;
+  padding: 40px 20px;
+}
+
+/* ─── Card — same as .dashboard-card ─── */
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  border: 2px solid #ede9fe;
+  border-radius: 20px;
+  padding: 44px 36px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(139, 92, 246, 0.07);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* accent bar on top — same as .dashboard-card::before */
+.auth-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #a78bfa, #ec4899, #a78bfa);
+}
+
+.auth-card:hover {
+  box-shadow: 0 12px 32px rgba(139, 92, 246, 0.18);
+  border-color: #a78bfa;
+}
+
+/* ─── Heading — same gradient as .dashboard-title ─── */
+.auth-card h2 {
+  font-size: 28px;
+  font-weight: 900;
+  margin: 0;
+  text-align: center;
+  background: linear-gradient(135deg, #7c3aed, #a78bfa, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Inputs ─── */
+.auth-card input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 18px;
+  font-size: 15px;
+  font-family: inherit;
+  font-weight: 500;
+  color: #1f2937;
+  background: #faf5ff;
+  border: 2px solid #ede9fe;
+  border-radius: 14px;
+  outline: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.auth-card input::placeholder {
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+.auth-card input:focus {
+  border-color: #a78bfa;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(167, 139, 250, 0.18);
+}
+
+/* ─── Button — same as .dashboard-user button ─── */
+.auth-card button {
+  width: 100%;
+  padding: 13px;
+  background: linear-gradient(135deg, #7c3aed, #a78bfa);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.auth-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(124, 58, 237, 0.35);
+}
+
+/* disabled — Login's loading state */
+.auth-card button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.15);
+}
+
+/* ─── Bottom link — same as .dashboard-card p ─── */
+.auth-card p,
+.auth-footer {
+  font-size: 14px;
+  color: #6b7280;
+  text-align: center;
+  margin: 0;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.auth-card p a,
+.auth-footer a {
+  color: #7c3aed;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.auth-card p a:hover,
+.auth-footer a:hover {
+  color: #ec4899;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 32px 22px 28px;
+  }
+  .auth-card h2 {
+    font-size: 24px;
+  }
+}

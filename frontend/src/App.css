@@ -1,0 +1,32 @@
+/* -------- GLOBAL APP STYLES -------- */
+
+/* Smooth animations */
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Prevent horizontal scroll */
+body {
+  overflow-x: hidden;
+}
+
+/* Default font family */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Remove link underline */
+a {
+  text-decoration: none;
+}
+
+/* Reusable shadow class */
+.card-shadow {
+  box-shadow: 0px 6px 20px rgba(0,0,0,0.1);
+}
+
+/* Custom container width */
+.container {
+  max-width: 1200px;
+  margin: auto;
+}

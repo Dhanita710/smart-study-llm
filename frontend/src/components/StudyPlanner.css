@@ -1,0 +1,210 @@
+.planner-container {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1e1b4b, #020617);
+  color: white;
+  padding: 40px 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #a5b4fc;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 30px;
+  padding: 8px 0;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  color: #c4b5fd;
+  transform: translateX(-4px);
+}
+
+.planner-title {
+  font-size: 48px;
+  font-weight: 900;
+  margin-bottom: 12px;
+  text-align: center;
+  background: linear-gradient(to right, #7c3aed, #4f46e5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.planner-subtitle {
+  text-align: center;
+  color: #c7d2fe;
+  font-size: 16px;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.planner-input-section {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.planner-input-section input {
+  padding: 14px 20px;
+  width: 400px;
+  max-width: 90%;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  color: #1f2937;
+  background: white;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.planner-input-section input:focus {
+  outline: none;
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+
+.planner-input-section button {
+  padding: 14px 32px;
+  background: linear-gradient(to right, #4f46e5, #7c3aed);
+  color: white;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.3s;
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.5);
+}
+
+.planner-input-section button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(124, 58, 237, 0.8);
+}
+
+.planner-input-section button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Error Box */
+.error-box {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 16px 20px;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 12px;
+  color: #fca5a5;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Loading Box */
+.loading-box {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 20px;
+  border: 4px solid rgba(124, 58, 237, 0.2);
+  border-top-color: #7c3aed;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loading-box p {
+  color: #c7d2fe;
+  font-size: 15px;
+}
+
+/* Results Box */
+.planner-result {
+  margin-top: 40px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 35px;
+  border-radius: 20px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.planner-result h3 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  background: linear-gradient(to right, #7c3aed, #4f46e5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.plan-content {
+  line-height: 1.9;
+}
+
+.plan-line {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #e5e7eb;
+  padding-left: 4px;
+}
+
+.plan-line:empty {
+  margin-bottom: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .planner-title {
+    font-size: 36px;
+  }
+  
+  .planner-input-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .planner-input-section input,
+  .planner-input-section button {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .planner-result {
+    padding: 25px;
+  }
+}
